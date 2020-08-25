@@ -1,4 +1,4 @@
 keyword:
   location:
-    version: classpath:/keyword_version.txt
-    message: classpath:/keyword.json
+    version: classpath:/json/keyword_version.txt
+    message: classpath:/json/keyword.json

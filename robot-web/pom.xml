@@ -21,10 +21,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -47,24 +43,18 @@
                     <resource>
                         <directory>src/main/resources</directory>
                         <includes>
-                            <include>keyword.json</include>
-                            <include>keyword_version.txt</include>
+                            <include>json/keyword.json</include>
+                            <include>json/keyword_version.txt</include>
                         </includes>
                     </resource>
                 </resources>
             </build>
         </profile>
 
-        <profile>
-            <id>deploy</id>
-            <properties>
-                <activeProfile>deploy</activeProfile>
-            </properties>
-        </profile>
     </profiles>
 
     <build>
-        <finalName>weChatRobot</finalName>
+        <finalName>chen</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -78,12 +68,6 @@
                 <directory>src/main/resources/static</directory>
                 <targetPath>static</targetPath>
             </resource>
-            <resource>
-                <directory>src/main/resources/${activeProfile}</directory>
-                <includes>
-                    <include>log4j2.xml</include>
-                </includes>
-            </resource>
         </resources>
         <plugins>
             <plugin>
@@ -91,7 +75,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.doodl6.wechatrobot.WebStarter</mainClass>
+                    <mainClass>com.doodl6.wechatrobot.HelloApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

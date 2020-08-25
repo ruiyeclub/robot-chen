@@ -40,7 +40,6 @@ public class MainController {
                 result = StringUtils.EMPTY;
             }
         }
-
         return result;
     }
 

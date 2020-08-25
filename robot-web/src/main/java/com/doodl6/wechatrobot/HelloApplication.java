@@ -4,14 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
-@SpringBootApplication(scanBasePackages = {
-        "com.doodl6.wechatrobot"
-})
+/**
+ * @author Ray。
+ */
+@SpringBootApplication
 @ServletComponentScan
-public class WebStarter {
-
+public class HelloApplication {
     public static void main(String[] args) {
-        SpringApplication.run(WebStarter.class, args);
+        SpringApplication.run(HelloApplication.class, args);
     }
-
 }

@@ -12,7 +12,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.Map.Entry;
 
-@Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class HttpUtil {
 
@@ -71,7 +70,7 @@ public final class HttpUtil {
             result = getStringFromInputStream(inputStream);
             httpUrlConn.disconnect();
         } catch (Exception e) {
-            log.error("post请求异常", e);
+            System.out.println("post请求异常"+e);
         }
 
         return result;
@@ -95,7 +94,7 @@ public final class HttpUtil {
             result = getStringFromInputStream(inputStream);
             httpUrlConn.disconnect();
         } catch (Exception e) {
-            log.error("get请求异常", e);
+            System.out.println("get请求异常"+e);
         }
 
         return result;
