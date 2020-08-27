@@ -41,7 +41,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>chen.jar</finalName>
+        <finalName>chen</finalName>
     </build>
 
 </project>
