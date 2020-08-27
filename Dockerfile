@@ -13,5 +13,5 @@ ADD chen.jar chen.jar
 # 运行jar包
 RUN bash -c 'touch /chen.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/chen.jar"]
-#暴露8080端口
+#暴露8081端口
 EXPOSE 8081
