@@ -1,5 +1,6 @@
-# robotchen
-forked from MartinDai/weChatRobot
+# robot chen
+[forked from MartinDai/weChatRobot](https://github.com/MartinDai/weChatRobot)
+
 一个简单的智能聊天机器人项目，基于微信公众号和图灵机器人开发。
 
 ![qrcode](http://qiniu.ruiyeclub.cn/weixin.jpg "扫码关注，体验智能机器人")
