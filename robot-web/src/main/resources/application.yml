@@ -1,12 +1,18 @@
 server:
-  port: 6666
-
+  port: 8081
 spring:
   http:
     encoding:
       charset: UTF-8
   profiles:
-    active: @activeProfile@
+    active: dev
+  thymeleaf:
+    cache: false  #cache: 是否缓存，开发模式下设置为false，避免改了模板还要重启服务器，线上设置为true，可以提高性能。
+  # 读取static目录下的文件 不加找不到
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
 
 app:
   token: raychen_11

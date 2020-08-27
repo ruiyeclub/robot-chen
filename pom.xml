@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.doodl6</groupId>
-    <artifactId>weChatRobot</artifactId>
+    <groupId>cn.ruiyeclub</groupId>
+    <artifactId>robot-chen</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-    <name>weChatRobot</name>
-    <url>http://wechatrobot.doodl6.com</url>
+    <name>robot-chen</name>
+    <url>http://robot.ruiyeclub.cn</url>
 
     <modules>
         <module>robot-web</module>
@@ -34,6 +34,14 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>${springboot.version}</version>
             </dependency>
 
