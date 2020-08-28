@@ -4,6 +4,7 @@ import cn.ruiyeclub.chen.service.WeChatService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,8 +22,15 @@ public class MainController {
 
     /**
      * 接收来至微信服务器的消息
-     **/
-    @RequestMapping("receiveMessage")
+     * @param signature
+     * @param timestamp
+     * @param nonce
+     * @param echostr
+     * @param request
+     * @param response
+     * @return true or false
+     */
+    @GetMapping("receiveMessage")
     public String receiveMessage(String signature, String timestamp, String nonce, String echostr, HttpServletRequest request, HttpServletResponse response) {
         String result;
         if (HttpMethod.GET.name().equals(request.getMethod())) {

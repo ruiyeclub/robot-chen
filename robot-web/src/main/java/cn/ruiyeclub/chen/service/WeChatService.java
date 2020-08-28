@@ -25,10 +25,8 @@ public class WeChatService {
 
     @Resource
     private WeChatMessageHandle eventMessageHandle;
-
     @Resource
     private WeChatMessageHandle textMessageHandle;
-
     @Resource
     private AppConfig appConfig;
 
@@ -51,6 +49,7 @@ public class WeChatService {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
             byte[] digest = md.digest(content.toString().getBytes(StandardCharsets.UTF_8));
             tmpStr = byteToHex(digest);
+            //这两个值必须相等
             return tmpStr.equals(signature);
         } catch (Exception e) {
             log.error("校验签名异常", e);
