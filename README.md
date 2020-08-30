@@ -12,7 +12,7 @@
 + JDK 1.8
 + SpringBoot 2.2.6.RELEASE
 + FastJson
-+ Log4j2 + Slf4j
++ Logback + Slf4j
 + XStream
 
 ## 使用说明：

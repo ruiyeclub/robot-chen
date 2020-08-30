@@ -15,5 +15,5 @@ spring:
     static-locations: classpath:/static/
 
 app:
-  token: raychen_11
+  token: raychen11
   apiKey: 7a6cf90d742843169133f8514aa5e91a
